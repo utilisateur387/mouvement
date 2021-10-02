@@ -15,6 +15,8 @@ h5, .card-tags {
   font-family: 'IBMPlexMono', monospace;
   text-transform: uppercase;
   font-size: 5em;
+  line-height: 1em;
+  margin: 30px 0;
 }
 .difference {
   mix-blend-mode: difference;
@@ -30,6 +32,10 @@ h5, .card-tags {
 }
 .pb-60 {
   padding-bottom: 60px !important;
+}
+.px-60 {
+  padding-left: 60px;
+  padding-right: 60px;
 }
 header {
   /*margin: 0 60px;*/
@@ -54,6 +60,9 @@ a {
   color: black;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 ul {
   display: flex;
   justify-content: space-between;
@@ -63,17 +72,26 @@ li {
   display: inline;
 }
 .col-2 {
-  background: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 60px;
+}
+.col-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 60px;
 }
+#articles-01 > * {
+  margin-bottom: 60px;
+}
+.bg-white {
+  background: white;
+}
 #articles-01 {
-/*  background: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 60px;*/
   padding: 0 60px 0 30px;
+}
+.articles-left {
+  padding: 0 30px 0 60px;
 }
 #articles-01 > div {
   overflow: hidden;
@@ -99,9 +117,6 @@ li {
   left: 0;
   z-index: -100;
 }
-#headline-fixed-left p {
-  margin: 0;
-}
 #headline-fixed-left > div {
   margin: 0 30px 60px 60px;
   position: absolute;
@@ -119,13 +134,21 @@ li {
   right: 0;
   z-index: -100;
 }
-#headline-fixed-right p {
-  margin: 0;
-}
 #headline-fixed-right > div {
   margin: 0 30px 60px 60px;
   position: absolute;
   bottom: 0;
+}
+#banner-mag {
+  background: #FFFF00;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 30px 36px;
+}
+#banner-mag img {
+  position: relative;
+  left: -5px;
 }
 
 @media screen and (max-width: 1024px) {
