@@ -27,6 +27,19 @@ h5, .card-tags {
 .mt-60 {
   margin-top: 60px;
 }
+.mt-30 {
+  margin-top: 30px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.my-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.mb-60 {
+  margin-bottom: 60px;
+}
 .pt-60 {
   padding-top: 60px !important;
 }
@@ -38,56 +51,99 @@ h5, .card-tags {
   padding-right: 60px;
 }
 header {
-  /*margin: 0 60px;*/
-}
-header {
   background: white;
   left: 0;
-  padding: 0 60px;
+  /*padding: 0 60px;*/
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
-#logo {
-  margin-top: 30px;
+.logo img {
+  max-width: 90%;
 }
-#menu {
+#navbar {
   width: 100%;
-  text-transform: uppercase;
+}
+#subnav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  font-size: 13px;
+}
+#subnav > ul > li:first-child {
+  margin-left: 60px;
+}
+#subnav > ul > li:last-child {
+  margin-right: 60px;
+}
+footer {
+  background: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /*height: 338px;*/
+  padding: 60px;
+  text-align: center;
 }
 a {
   color: black;
   text-decoration: none;
 }
-a:hover {
+/*a:hover {
   text-decoration: underline;
-}
+}*/
+/*.link:hover, .card-title:hover {
+  text-decoration: underline;
+}*/
 ul {
-  display: flex;
-  justify-content: space-between;
   padding-inline-start: 0px;
 }
 li {
   display: inline;
+  margin: 0 12px;
+}
+#footer-links {
+  width: 100%;
+}
+.links {
+  margin: 0 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875em;
+  display: flex;
+  justify-content: center;
+}
+.links li:hover {
+  text-decoration: underline;
+}
+.section-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .col-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 60px;
 }
 .col-3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 60px;
 }
-#articles-01 > * {
-  margin-bottom: 60px;
+.gap-60 {
+  grid-column-gap: 60px;
 }
 .bg-white {
   background: white;
 }
-#articles-01 {
+.articles-right {
   padding: 0 60px 0 30px;
 }
 .articles-left {
@@ -149,10 +205,64 @@ li {
 #banner-mag img {
   position: relative;
   left: -5px;
+  width: 100%;
+}
+.banner-full-width > div {
+  padding: 0 60px;
+}
+.banner-full-width img {
+  max-width: 100%;
+}
+.img-banner-theatre {
+  width: 100%;
+}
+.empty {
+  height: 100vh
 }
 
 @media screen and (max-width: 1024px) {
   .col-2 {
-    grid-template-columns: 1fr;
+    display: block;
+  }
+
+  .title-large {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .empty {
+    display: none;
+  }
+  .section-split {
+    display: block;
+    /*grid-template-columns: 1fr;*/
+  }
+  .col-3 {
+    display: block;
+  }
+  #headline-fixed-left, #headline-fixed-right {
+/*    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 30px;
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("../images/img-bg-archi-01.png");
+    height: 100vh;
+    z-index: -100;*/
+    width: 100%;
+    position: relative;
+  }
+  .articles-left, .articles-right {
+    padding: 0 30px;
+  }
+  .px-60 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .banner-full-width > div {
+    padding: 0 30px;
+  }
+  footer {
+    padding: 60px 30px;
   }
 }
