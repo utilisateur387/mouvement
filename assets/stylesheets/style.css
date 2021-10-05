@@ -1,7 +1,6 @@
 @import "components/card.css";
 @import "fonts.css";
 
-
 body {
   background: white;
   margin: 0;
@@ -50,21 +49,41 @@ h5, .card-tags {
   padding-left: 60px;
   padding-right: 60px;
 }
+.sans-serif {
+  font-family: sans-serif;
+}
 header {
   background: white;
   left: 0;
-  /*padding: 0 60px;*/
+  top: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: sticky;
+  z-index: 100;
+}
+header .logo {
+  width: 90%;
+  margin: 30px 0;
+  background: white;
 }
 .logo img {
-  max-width: 90%;
+  max-width: 100%;
+}
+.logo-small {
+  width: 50% !important;
+  margin: 12px 0 !important;
 }
 #navbar {
   width: 100%;
+  position: absolute;
+  z-index: -50;
+  background: white;
+  padding-bottom: 16px;
+  top: 122px;
+  transition: 0.3s;
 }
 #subnav {
   position: fixed;
@@ -83,32 +102,48 @@ header {
 #subnav > ul > li:last-child {
   margin-right: 60px;
 }
+#burger-menu-mobile {
+  display: none;
+}
+#burger-menu-mobile img, #burger-menu-desktop img {
+  width: 20px;
+}
+/*#burger-menu-desktop {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 100;
+  display: none;
+}*/
+/*.burger-menu-visible {
+  display: block !important;
+}*/
+#icone-recherche {
+  display: none;
+}
 footer {
   background: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /*height: 338px;*/
   padding: 60px;
   text-align: center;
+}
+#contact-infos p {
+  font-size: 12px;
+  font-weight: bold;
 }
 a {
   color: black;
   text-decoration: none;
 }
-/*a:hover {
-  text-decoration: underline;
-}*/
-/*.link:hover, .card-title:hover {
-  text-decoration: underline;
-}*/
 ul {
   padding-inline-start: 0px;
 }
 li {
   display: inline;
-  margin: 0 12px;
+  margin: 0 16px;
 }
 #footer-links {
   width: 100%;
@@ -121,7 +156,7 @@ li {
   display: flex;
   justify-content: center;
 }
-.links li:hover {
+.links li:hover, #subnav a:hover {
   text-decoration: underline;
 }
 .section-split {
@@ -160,18 +195,22 @@ li {
   /*flex: 1;*/
   overflow: hidden;
 }
-#headline-fixed-left {
+#headline-fixed-left, #headline-fixed-right {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-right: 30px;
   background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("../images/img-bg-archi-01.png");
   position: fixed;
   width: calc(50vw - 30px);
   height: 100vh;
   top: 0;
-  left: 0;
   z-index: -100;
+  min-height: 870px;
+}
+#headline-fixed-left {
+  margin-right: 30px;
+  background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("../images/img-bg-archi-01.png");
+  left: 0;
 }
 #headline-fixed-left > div {
   margin: 0 30px 60px 60px;
@@ -179,16 +218,8 @@ li {
   bottom: 0;
 }
 #headline-fixed-right {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("../images/img-bg-02.png");
-  position: fixed;
-  width: calc(50vw - 30px);
-  height: 100vh;
-  top: 0;
   right: 0;
-  z-index: -100;
 }
 #headline-fixed-right > div {
   margin: 0 30px 60px 60px;
@@ -224,9 +255,29 @@ li {
   .col-2 {
     display: block;
   }
-
   .title-large {
     font-size: 3.5em;
+  }
+  #navbar {
+    display: none;
+  }
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 30px;
+  }
+  header .logo {
+    width: 50%;
+    margin: 12px 0;
+  }
+  #burger-menu-mobile {
+    display: block;
+  }
+  #subnav {
+    display: none;
+  }
+  #icone-recherche {
+    display: block;
   }
 }
 
@@ -236,24 +287,19 @@ li {
   }
   .section-split {
     display: block;
-    /*grid-template-columns: 1fr;*/
   }
   .col-3 {
     display: block;
   }
   #headline-fixed-left, #headline-fixed-right {
-/*    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-right: 30px;
-    background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("../images/img-bg-archi-01.png");
-    height: 100vh;
-    z-index: -100;*/
     width: 100%;
     position: relative;
   }
+  #headline-fixed-left > div {
+    margin: 30px;
+  }
   .articles-left, .articles-right {
-    padding: 0 30px;
+    padding: 30px;
   }
   .px-60 {
     padding-left: 30px;

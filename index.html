@@ -12,9 +12,17 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <div class="logo my-30">
-      <img src="assets/images/logo.png" alt="logo" class="difference">
+  <header id="header">
+    <div id="burger-menu-mobile">
+      <img src="assets/images/icon-burger-menu.svg" alt="">
+    </div>
+
+    <div id="header-logo" class="logo">
+      <a href="./index.html"><img src="assets/images/logo.png" alt="Logo" class="difference"></a>
+    </div>
+
+    <div id="icone-recherche">
+      <img src="assets/images/icon-magnifier.svg" alt="Icone de recherche">
     </div>
 
     <div id="navbar" class="mb-30">
@@ -27,7 +35,7 @@
         <li><a href="#">Cinéma</a></li>
         <li><a href="#">Musique</a></li>
         <li><a href="#">Agenda</a></li>
-        <li><img src="assets/images/icon-magnifier.svg" alt=""></li>
+        <li><img src="assets/images/icon-magnifier.svg" alt="Icone de recherche"></li>
       </ul>
     </div>
   </header>
@@ -57,14 +65,6 @@
       <p>Par Damien Behar</p>
     </div>
   </div>
-
-<!--   <div id="headline-fixed-right" class="headline-fixed">
-    <div>
-      <h5>Scène — Reportage</h5>
-      <p class="title-large">Hillel Kogan<br/> Un pied à Paris, l’autre au Caire</p>
-      <p>Par Damien Behar</p>
-    </div>
-  </div> -->
 
 
   <!-- Section 1 : Articles / right -->
@@ -246,7 +246,7 @@
       </div>
 
       <div class="col-2 gap-60">
-        <img src="assets/images/img-banner-theatre-nord-vertical-col2.png" class="img-banner-theatre" alt="">
+        <img src="assets/images/img-banner-theatre-nord-vertical-col2.png" class="img-banner-theatre" alt="Publicité Théâtre du Nord">
 
         <div class="card">
           <a href="#">
@@ -284,7 +284,7 @@
   <!-- Section 4 : 3 columns articles / full-width -->
   <section>
     <div class="col-3 pt-60 bg-white px-60">
-      <img src="assets/images/img-banner-theatre-nord-vertical-col3.png" class="img-banner-theatre" alt="">
+      <img src="assets/images/img-banner-theatre-nord-vertical-col3.png" class="img-banner-theatre" alt="Publicité Théâtre du Nord">
 
       <div class="card">
         <a href="#">
@@ -321,7 +321,7 @@
 
   <section class="banner-full-width bg-white">
     <div>
-      <img src="assets/images/img-banner-theatre-nord.png" class="img-banner-theatre" alt="">
+      <img src="assets/images/img-banner-theatre-nord.png" class="img-banner-theatre" alt="Publicité Théâtre du Nord">
     </div>
   </section>
 
@@ -333,17 +333,18 @@
 
     <div id="footer-links" class="mt-30">
       <ul class="links">
-        <li><a href="#">Contact</a></li>
         <li><a href="#">Newsletter</a></li>
         <li><a href="#">Mentions légales</a></li>
         <li><a href="#">Qui sommes-nous ?</a></li>
       </ul>
     </div>
 
-    <div>
-      <p>01 71 76 38 03 — Abonnements — 14 rue Charles V— 75004 Paris</p>
+    <div id="contact-infos">
+      <p class="sans-serif">01 71 76 38 03 — Abonnements — 14 rue Charles V — 75004 Paris</p>
     </div>
 
   </footer>
+
+  <script src="assets/js/navbar.js"></script>
 </body>
 </html>
