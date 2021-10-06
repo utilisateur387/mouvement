@@ -86,6 +86,10 @@ footer {
   width: 100%;
   margin-top: 30px;
 }
+#subnav li {
+  display: inline;
+  margin: 0 10px;
+}
 .links {
   margin: 0 60px;
   text-transform: uppercase;
@@ -97,7 +101,27 @@ footer {
 .links li:hover, #subnav a:hover {
   text-decoration: underline;
 }
-
+#menu-mobile {
+  background: white;
+  padding: 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+#menu-mobile ul:first-child {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#menu-mobile li {
+  margin: 6px 0;
+}
+#burger-menu-mobile:hover {
+  cursor: pointer;
+}
+.display-block {
+  display: block !important;
+}
 
 /* Global tags and classes */
 
@@ -161,10 +185,15 @@ a {
 }
 ul {
   padding-inline-start: 0px;
+  list-style: none;
 }
 li {
+/*  display: inline;
+  margin: 0 14px;*/
+}
+#navbar li, #footer-links li {
   display: inline;
-  margin: 0 16px;
+  margin: 0 14px;
 }
 
 

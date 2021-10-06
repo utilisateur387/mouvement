@@ -28,4 +28,24 @@ const toggleNavbar = () => {
   }
 }
 
+const toggleMenuMobile = () => {
+  const burgerMenu = document.getElementById('burger-menu-mobile');
+  const menuMobile = document.getElementById('menu-mobile');
+
+  burgerMenu.addEventListener('click', () => {
+    menuMobile.classList.toggle('display-block');
+  })
+
+  let w = window.innerWidth;
+  window.addEventListener('resize', () => {
+    if(w > 1024 && menuMobile) {
+      console.log('1024 +');
+      menuMobile.classList.remove('display-block');
+    }
+  });
+
+}
+
+toggleMenuMobile();
 toggleNavbar();
+
