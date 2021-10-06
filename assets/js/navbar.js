@@ -10,12 +10,16 @@ const toggleNavbar = () => {
       navbarEvent();
   })
 
-  const navbarEvent = () => {
+  header.addEventListener('mouseleave', () => {
+      navbarEvent('mouseleave');
+  })
+
+  const navbarEvent = (action = null) => {
     let w = window.innerWidth;
     const navbar = document.getElementById("navbar");
     let currentScrollPos = window.pageYOffset;
 
-    if (prevScrollpos < currentScrollPos && w > 1024) {
+    if (prevScrollpos < currentScrollPos && w > 1024 || action == "mouseleave") {
       navbar.style.top = "70px";
     } else if (w > 1024) {
       navbar.style.top = "122px";
